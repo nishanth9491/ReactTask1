@@ -5,16 +5,14 @@ class Card extends Component
     constructor()
     {
         super();
-        this.state={count:0,name:""};
+        this.state={count:0};
         
     }
     handleChange=(event)=>{
-        const newName=event.target.value;
-        const diff=newName.length-this.state.name.length;
+        
         this.setState(
         {
-            name:newName,
-            count:this.state.name.length+diff,
+            count:event.target.value.length,
 
         });
     }
